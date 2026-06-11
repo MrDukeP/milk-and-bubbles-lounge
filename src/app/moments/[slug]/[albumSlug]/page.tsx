@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -29,15 +31,6 @@ export async function generateMetadata({ params }: AlbumPageProps): Promise<Meta
   };
 }
 
-export async function generateStaticParams() {
-  const content = await getSiteContent();
-  return content.profiles.flatMap((profile) =>
-    profile.albums.map((album) => ({
-      slug: profile.slug,
-      albumSlug: album.slug,
-    })),
-  );
-}
 
 export default async function AlbumPage({ params }: AlbumPageProps) {
   const verified = await isAgeVerified();
