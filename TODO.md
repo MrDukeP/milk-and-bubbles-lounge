@@ -1,0 +1,9 @@
+- [x] Add `export const runtime = "edge";` to `src/app/page.tsx`
+- [x] Add `export const runtime = "edge";` to `src/app/booking/page.tsx`
+- [x] Add `export const runtime = "edge";` to `src/app/moments/page.tsx`
+- [x] Add `export const runtime = "edge";` to `src/app/moments/[slug]/page.tsx`
+- [x] Add `export const runtime = "edge";` to `src/app/moments/[slug]/[albumSlug]/page.tsx`
+- [ ] Run `npm run build`
+- [ ] Run `git add .`
+- [ ] Run `git commit -m "Configure Cloudflare edge runtime"`
+- [ ] Run `git push`
