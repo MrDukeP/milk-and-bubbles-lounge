@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -29,10 +31,6 @@ export async function generateMetadata({ params }: ProfilePageProps): Promise<Me
   };
 }
 
-export async function generateStaticParams() {
-  const content = await getSiteContent();
-  return content.profiles.map((profile) => ({ slug: profile.slug }));
-}
 
 export default async function ProfilePage({ params }: ProfilePageProps) {
   const verified = await isAgeVerified();
